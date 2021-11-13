@@ -41,7 +41,7 @@ func SaveLog(contentStr string,path string)  {
 		path = "./logs/" +time.Now().Format("2006-01-02")+"_log"+ ".txt"
 	}
 	pathArr := strings.Split(path,"/")
-	countPath := len(pathArr)-2
+	countPath := len(pathArr)-1
 	pathArrNew := pathArr[:countPath]
 	pathCheck := strings.Join(pathArrNew,"/")
 	CheckFile(pathCheck)
